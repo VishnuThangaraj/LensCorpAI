@@ -25,12 +25,12 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
     /*
         FUNCTION NAME : doFilterInternal
-        DESCRIPTION : This method is an overridden method from the OncePerRequestFilter class,
-                      and it serves as a key component of the authentication and authorization process
-                      in a Spring Security filter chain. This method intercepts incoming HTTP requests,
-                      extracts and validates JWTs from the Authorization header,
-                      and updates the security context if the token is valid.
-        PARAMETER : HttpServletRequest (request), HttpServletResponse (response), FilterChain (filterChain)
+        DESCRIPTION   : This method is an overridden method from the OncePerRequestFilter class,
+                        and it serves as a key component of the authentication and authorization process
+                        in a Spring Security filter chain. This method intercepts incoming HTTP requests,
+                        extracts and validates JWTs from the Authorization header,
+                        and updates the security context if the token is valid.
+        PARAMETER     : HttpServletRequest (request), HttpServletResponse (response), FilterChain (filterChain)
     */
     @Override
     protected void doFilterInternal(

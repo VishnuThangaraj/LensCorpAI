@@ -21,11 +21,11 @@ public class SecurityConfiguration {
 
     /*
         FUNCTION NAME : securityFilterChain
-        DESCRIPTION : This method is annotated with @Bean, defines the configuration of the Spring
-                      Security filter chain for handling HTTP security within the application.
-                      It customizes security settings, such as authorization rules, session management,
-                      and authentication providers, while incorporating a JWT authentication filter.
-        PARAMETER : HttpSecurity (http)
+        DESCRIPTION   : This method is annotated with @Bean, defines the configuration of the Spring
+                        Security filter chain for handling HTTP security within the application.
+                        It customizes security settings, such as authorization rules, session management,
+                        and authentication providers, while incorporating a JWT authentication filter.
+        PARAMETER     : HttpSecurity (http)
     */
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {

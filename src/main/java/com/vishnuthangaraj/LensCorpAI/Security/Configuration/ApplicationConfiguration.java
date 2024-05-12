@@ -21,11 +21,11 @@ public class ApplicationConfiguration {
 
     /*
         FUNCTION NAME : userDetailsService
-        DESCRIPTION : This method, annotated with @Bean, defines the implementation of the UserDetailsService
-                       interface. This bean is responsible for loading user details by username
-                       from the application's repository (appUserRepository). If a user with the given
-                       username (email) is not found, a UsernameNotFoundException is thrown.
-        PARAMETER : 'null'
+        DESCRIPTION   : This method, annotated with @Bean, defines the implementation of the UserDetailsService
+                        interface. This bean is responsible for loading user details by username
+                        from the application's repository (appUserRepository). If a user with the given
+                        username (email) is not found, a UsernameNotFoundException is thrown.
+        PARAMETER     : 'null'
     */
     @Bean
     public UserDetailsService userDetailsService(){
@@ -35,11 +35,11 @@ public class ApplicationConfiguration {
 
     /*
         FUNCTION NAME : authenticationProvider
-        DESCRIPTION : This method is annotated with @Bean, defines the configuration of the authentication
-                      provider used by Spring Security. It utilizes the DaoAuthenticationProvider,
-                      specifying the user details service (userDetailsService())
-                      and password encoder (passwordEncoder()).
-        PARAMETER : 'null'
+        DESCRIPTION   : This method is annotated with @Bean, defines the configuration of the authentication
+                        provider used by Spring Security. It utilizes the DaoAuthenticationProvider,
+                        specifying the user details service (userDetailsService())
+                        and password encoder (passwordEncoder()).
+        PARAMETER     : 'null'
     */
     @Bean
     public AuthenticationProvider authenticationProvider(){
@@ -54,10 +54,10 @@ public class ApplicationConfiguration {
 
     /*
         FUNCTION NAME : authenticationManager
-        DESCRIPTION : method, annotated with @Bean, defines the configuration for the authentication
-                      manager bean in Spring Security. It retrieves the authentication manager
-                      instance from the provided AuthenticationConfiguration.
-        PARAMETER : AuthenticationConfiguration (config)
+        DESCRIPTION   : method, annotated with @Bean, defines the configuration for the authentication
+                        manager bean in Spring Security. It retrieves the authentication manager
+                        instance from the provided AuthenticationConfiguration.
+        PARAMETER     : AuthenticationConfiguration (config)
     */
     @Bean
     public AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception {
@@ -66,10 +66,10 @@ public class ApplicationConfiguration {
 
     /*
         FUNCTION NAME : passwordEncoder
-        DESCRIPTION : This method is annotated with @Bean, defines the configuration for the password encoder
-                      used in Spring Security. It produces an instance of the BCryptPasswordEncoder,
-                      a widely used password hashing algorithm that provides security by incorporating salt.
-        PARAMETER : 'null'
+        DESCRIPTION   : This method is annotated with @Bean, defines the configuration for the password encoder
+                        used in Spring Security. It produces an instance of the BCryptPasswordEncoder,
+                        a widely used password hashing algorithm that provides security by incorporating salt.
+        PARAMETER     : 'null'
     */
     @Bean
     public PasswordEncoder passwordEncoder() {
