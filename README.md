@@ -14,6 +14,20 @@ This repository contains a Spring Boot project that implements JWT (JSON Web Tok
 - **User Logout**: Logged-in users can log out. Upon logout, the user's token is added to a blacklist to prevent reuse.
 - **View Profile**: Logged-in users can view their profile information.
 
+## Requirements
+
+This project requires the following technologies:
+
+- **Java**: Version 17 or higher is required.
+- **Spring Boot**: This project is based on Spring Boot. Version 3.2 or higher is required.
+- **PostgreSQL**: This project uses PostgreSQL for data storage. Version 4 or higher is required.
+- **Maven**: Maven is used for project management and build automation.
+- **Postman**: Version 9 or higher of Postman is recommended for testing the API endpoints.
+- **IntelliJ IDEA**: The latest version of IntelliJ IDEA is recommended for development.
+
+Please ensure that you have these technologies installed and properly configured before running the project.
+
+
 ## Installation
 
 1. Clone this repository: `git clone https://github.com/VishnuThangaraj/LensCorpAI.git`
