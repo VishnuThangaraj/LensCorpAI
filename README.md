@@ -29,6 +29,7 @@ After running the application, you can use the following endpoints:
 - `/api/auth/authenticate`: To log in as a user.
 - `/api/auth/logout`: To log out as a user.
 - `/api/app/profile`: To view the profile of the currently logged-in user.
+- `/swagger-ui/index.html` : To view Swagger-UI Documentation
 
 Please note that you need to include the JWT in the `Authorization` header for the `/api/auth/logout` and `/api/app/profile` routes.
 
@@ -36,7 +37,7 @@ Please note that you need to include the JWT in the `Authorization` header for t
 
 - **Project Zip File**: [Download Here](http)
 - **PostMan Collection File** [Download Here](https://drive.google.com/file/d/1RbkJgMm2uI3UVSIjaQfKOiWJ2oGK6Uxc/view?usp=drive_link)
-- **Usage Video**: [Watch Here]()
+- **Installation Guide**: [Download Here](https://drive.google.com/file/d/1PsDF_-bqyOR7uuX0rvFjqSIneqnuX1os/view?usp=drive_link)
 
 ## Contributing
 
