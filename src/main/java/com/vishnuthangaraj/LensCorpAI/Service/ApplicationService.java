@@ -4,6 +4,7 @@ import com.vishnuthangaraj.LensCorpAI.DTO.Response.ProfileResponse;
 import com.vishnuthangaraj.LensCorpAI.Exceptions.AuthenticationExceptions.InvalidTokenException;
 import com.vishnuthangaraj.LensCorpAI.Model.AppUser;
 import com.vishnuthangaraj.LensCorpAI.Repository.AppUserRepository;
+import com.vishnuthangaraj.LensCorpAI.Security.JwtBlacklistService;
 import com.vishnuthangaraj.LensCorpAI.Security.JwtService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -15,6 +16,7 @@ import org.springframework.stereotype.Service;
 public class ApplicationService {
 
     private  final AppUserRepository appUserRepository;
+    private final JwtBlacklistService jwtBlacklistService;
     private final JwtService jwtService;
 
     /*
@@ -28,7 +30,8 @@ public class ApplicationService {
     public ProfileResponse getProfile() throws InvalidTokenException {
         String currentUserToken = jwtService.getCurrentUserToken();
 
-        if(currentUserToken == null){
+        // Check if the Provided Token is Valid
+        if(currentUserToken == null || jwtBlacklistService.isTokenBlacklisted(currentUserToken)){
             log.warn("The user is attempting to view Profile without a Valid Token");
             throw new InvalidTokenException("No Token provided for Authentication");
         }

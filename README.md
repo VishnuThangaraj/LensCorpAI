@@ -1,4 +1,4 @@
-# LensCorpAI Assesment
+# LensCorpAI Assessment
 
 # Spring Boot JWT Authentication Project
 
@@ -35,7 +35,7 @@ Please note that you need to include the JWT in the `Authorization` header for t
 ## Download
 
 - **Project Zip File**: [Download Here](http)
-- **PostMan Collection File** [Download Here]()
+- **PostMan Collection File** [Download Here](https://drive.google.com/file/d/1RbkJgMm2uI3UVSIjaQfKOiWJ2oGK6Uxc/view?usp=drive_link)
 - **Usage Video**: [Watch Here]()
 
 ## Contributing
