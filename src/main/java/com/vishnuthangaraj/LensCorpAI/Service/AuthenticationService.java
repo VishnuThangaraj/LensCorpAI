@@ -118,6 +118,13 @@ public class AuthenticationService {
             throw new InvalidTokenException("No Token provided for Authentication");
         }
 
+        // Validate Token
+        if(jwtBlacklistService.isTokenBlacklisted(currentUserToken)){
+            log.warn("The User is attempting to Logout without a Valid Token");
+            throw new InvalidTokenException("A token that has already expired has been supplied for the logout operation, " +
+                    "or the user has previously logged out.");
+        }
+
         String userEmail = jwtService.extractUserName(currentUserToken); // Extract Current User Email
 
         jwtBlacklistService.blacklistToken(currentUserToken); // Prevents Multiple Logout of Same User
